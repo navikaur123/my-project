@@ -21,16 +21,11 @@ class App extends React.Component {
 
     fetch("https://swapi.co/api/people/")
     .then(result => result.json()).then(data => {
-        // console.log(user.results[0].name);
         let users = data.results;
         let user = users.filter(val => (name === val.name))[0];
 
         if(user.birth_year === password){
-
-          // let history = this.props.history;
-          // console.log("a ra hai", this.props.history);
           this.setState({flag : false});
-          // history.push("/searchPage");
         }
     })
   }

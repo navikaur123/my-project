@@ -21,7 +21,6 @@ class SearchPage extends React.Component {
         let planetsData = data.results;
         let list = planetsData.filter(val => !val.name.indexOf(value));
         this.setState({planetsList : list, searchFlag : searchFlag + 1});
-        console.log("list", list, searchFlag);
       })
     }
     else {
